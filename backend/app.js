@@ -94,7 +94,8 @@ app.post('/usuario', (req, res, next) => {
         user.classificacao = req.body.classificacao;
         //console.log('User:' + user);
         listaUsers.push(user);
-        //console.log('listaUsers:' + listaUsers);
+       // console.log('listaUsers:' + listaUsers);
+        res.json(listaUsers);
         return res.end();
     } catch (error) {
         console.error(error);
